@@ -1,14 +1,18 @@
 var http = require('http'),
-    config = require('./config');
+    config = require('./config'),
+    request = require('request');
 
-var options = {
-    host: config.url,
-    port: 80
-}
+var client = {};
 
-module.exports = function(path) {
-    var client = {};
-    options.path = path;
+client.makeRequest = function(path, callback) {
+    var url = this.buildUrl(path);
+    request(url, function(error, response, body) {
+        callback(null, response);
+    });
+};
 
-    http.get(options)
-}
+client.buildUrl = function(path) {
+    return config.baseUrl + path;
+};
+
+module.exports = client;

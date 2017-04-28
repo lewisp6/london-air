@@ -1,13 +1,24 @@
 'use strict';
 
-var request = require('request');
-
+var client = require('./client');
 var pollution = {};
 
-pollution.getAllHourlyPollutionLevels = function() {
-    request('http://api.erg.kcl.ac.uk/AirQuality/Hourly/MonitoringIndex/GroupName=London/Json', function(error, response, body) {
+pollution.getHourlyPollutionLevels = function(siteCode) {
+    var path = this.buildUrlPath(siteCode);
+
+    client.makeRequest(url, function(error, response) {
         return 1;
     });
-}
+};
+
+pollution.buildUrlPath = function(siteCode) {
+    var url = 'Hourly/MonitoringIndex/GroupName=London/Json';
+
+    if (siteCode) {
+        url = 'Hourly/MonitoringIndex/SiteCode=BG1/Json';
+    }
+
+    return url;
+};
 
 module.exports = pollution;

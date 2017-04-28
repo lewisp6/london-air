@@ -3,5 +3,5 @@
 const baseUrl = "http://api.erg.kcl.ac.uk/AirQuality/";
 
 module.exports = {
-    baseUrl: baseUrl;
+    baseUrl: baseUrl,
 };
