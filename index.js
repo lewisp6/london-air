@@ -1,5 +1,3 @@
-module.exports = function() {
-    return {
-        pollution: require('./src/pollution.js');
-    }
-};
+'use strict';
+
+module.exports = require('./src/pollution');

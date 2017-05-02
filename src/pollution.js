@@ -3,11 +3,11 @@
 var client = require('./client');
 var pollution = {};
 
-pollution.getHourlyPollutionLevels = function(siteCode) {
+pollution.getHourlyPollutionLevels = function(siteCode, callback) {
     var path = this.buildUrlPath(siteCode);
 
-    client.makeRequest(url, function(error, response) {
-        return 1;
+    client.makeRequest(path, function(error, response) {
+        return callback(null, response);
     });
 };
 
