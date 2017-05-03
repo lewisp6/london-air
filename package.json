@@ -17,6 +17,13 @@
     "api"
   ],
   "author": "Lewis Pearson",
+  "email": "lewisp6@gmail.com",
+  "url": "lpearson.co.uk",
+  "repository" :
+  {
+      "type" : "git",
+      "url" : "https://github.com/lewisp6/london-air"
+  },
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.2.0"
