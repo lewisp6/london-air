@@ -5,6 +5,8 @@ A JS wrapper for the London air quality API provided by http://www.londonair.org
 The API can be used to get real time pollution information for different London areas.
 
 ## Usage
+### Install
+`npm install london-air`
 
 To begin using:
 
