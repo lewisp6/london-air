@@ -1,6 +1,6 @@
 'use strict';
 
-var assert = require('assert'),
+var assert = require('chai').assert,
     pollution = require('../src/pollution');
 
 describe('buildUrlPath', function() {
@@ -14,7 +14,10 @@ describe('buildUrlPath', function() {
 });
 
 describe('getHourlyPollutionLevel', function() {
-    it ('should return a response', function() {
-        assert.equal(pollution.getHourlyPollutionLevels('BG1'), 1);
+    it ('should return a response', function(done) {
+        pollution.getHourlyPollutionLevels('BG1', function(error, result) {
+            assert.isNotNull(result);
+            done();
+        });
     });
 });

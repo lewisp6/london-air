@@ -19,13 +19,13 @@
   "author": "Lewis Pearson",
   "email": "lewisp6@gmail.com",
   "url": "lpearson.co.uk",
-  "repository" :
-  {
-      "type" : "git",
-      "url" : "https://github.com/lewisp6/london-air"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewisp6/london-air"
   },
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^3.2.0"
   },
   "dependencies": {
