@@ -3,14 +3,9 @@
 var urlHelper = require('./UrlHelper'),
     request = require('request');
 
-var healthMessage = {};
+var client = {};
 
-healthMessage.getUrlPath = function() {
-    return 'Information/IndexHealthAdvice/Json';
-};
-
-healthMessage.getAllHealthMessages = function(handleResponse) {
-    var path = this.getUrlPath();
+client.makeRequest = function(path, handleResponse) {
     var url = urlHelper.buildUrl(path);
 
     request(url, function(error, response, body) {
@@ -22,4 +17,4 @@ healthMessage.getAllHealthMessages = function(handleResponse) {
     });
 };
 
-module.exports = healthMessage;
+module.exports = client;
