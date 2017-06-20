@@ -9,7 +9,7 @@ describe('buildUrlPath', function() {
     });
 
     it ('should return hourly url path with site', function() {
-        assert.equal('Hourly/MonitoringIndex/SiteCode=BG1/Json', pollution.buildUrlPath('BG1'));
+        assert.equal('Hourly/MonitoringIndex/SiteCode=BG2/Json', pollution.buildUrlPath('BG2'));
     });
 });
 

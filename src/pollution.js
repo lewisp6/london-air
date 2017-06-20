@@ -22,7 +22,7 @@ pollution.buildUrlPath = function(siteCode) {
     var url = 'Hourly/MonitoringIndex/GroupName=London/Json';
 
     if (siteCode) {
-        url = 'Hourly/MonitoringIndex/SiteCode=BG1/Json';
+        url = 'Hourly/MonitoringIndex/SiteCode=' + siteCode + '/Json';
     }
 
     return url;
