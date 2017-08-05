@@ -12,7 +12,32 @@ To begin using:
 
 ```
     var londonAir = require('london-air');
-    londonAir.getHourlyPollutionLevels(null, function(error, response) {
+    londonAir.pollution.getHourlyPollutionLevels(null, function(error, response) {
         console.log(response);
     });
 ```
+
+## Pollution Levels
+
+### Hourly levels
+To get hourly pollution levels for every area in London:
+
+```
+londonAir.pollution.getHourlyPollutionLevels(null, callback(error, response));
+```
+
+To get hourly pollution levels for a specific area provide the site code of the area as the first argument.
+
+```
+londonAir.pollution.getHourlyPollutionLevels('BG1', callback(error, response));
+```
+[Full list of site codes that can be used in the request.](site_codes.md)
+
+## Health Messages
+To get a list of health advice for each pollution level:
+```
+londonAir.healthMessage.getAllHealthMessages(callback(error, response));
+```
+
+## Data Source
+All data comes from http://www.londonair.org.uk/Londonair/API/
