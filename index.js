@@ -1,3 +1,9 @@
 'use strict';
 
-module.exports = require('./src/pollution');
+var pollution = require('./src/pollution'),
+    healthMessage = require('./src/HealthMessage');
+
+module.exports = {
+    pollution: pollution,
+    healthMessage: healthMessage
+};

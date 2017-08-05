@@ -13,7 +13,7 @@ client.makeRequest = function(path, handleResponse) {
             return handleResponse(error);
         }
 
-        return handleResponse(null, response);
+        return handleResponse(null, body);
     });
 };
 
