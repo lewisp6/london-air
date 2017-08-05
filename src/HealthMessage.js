@@ -1,7 +1,8 @@
 'use strict';
 
 var urlHelper = require('./UrlHelper'),
-    request = require('request');
+    request = require('request'),
+    client = require('./client');
 
 var healthMessage = {};
 
@@ -11,15 +12,7 @@ healthMessage.getUrlPath = function() {
 
 healthMessage.getAllHealthMessages = function(handleResponse) {
     var path = this.getUrlPath();
-    var url = urlHelper.buildUrl(path);
-
-    request(url, function(error, response, body) {
-        if (error) {
-            return handleResponse(error);
-        }
-
-        return handleResponse(null, response);
-    });
+    client.makeRequest(path, handleResponse);
 };
 
 module.exports = healthMessage;

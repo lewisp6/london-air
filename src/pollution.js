@@ -1,21 +1,14 @@
 'use strict';
 
 var urlHelper = require('./UrlHelper'),
-    request = require('request');
+    request = require('request'),
+    client = require('./client');
 
 var pollution = {};
 
 pollution.getHourlyPollutionLevels = function(siteCode, callback) {
     var path = this.buildUrlPath(siteCode);
-    var url = urlHelper.buildUrl(path);
-
-    request(url, function(error, response, body) {
-        if (error) {
-            return callback(error);
-        }
-
-        return callback(null, response);
-    });
+    client.makeRequest(path, callback);
 };
 
 pollution.buildUrlPath = function(siteCode) {
