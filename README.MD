@@ -11,7 +11,7 @@ The API can be used to get real time pollution information for different London 
 To begin using:
 
 ```
-    var londonAir = require('london-air');
+    var londonAir = require("london-air");
     londonAir.pollution.getHourlyPollutionLevels(null, function(error, response) {
         console.log(response);
     });
@@ -29,7 +29,7 @@ londonAir.pollution.getHourlyPollutionLevels(null, callback(error, response));
 To get hourly pollution levels for a specific area provide the site code of the area as the first argument.
 
 ```
-londonAir.pollution.getHourlyPollutionLevels('BG1', callback(error, response));
+londonAir.pollution.getHourlyPollutionLevels("BG1", callback(error, response));
 ```
 [Full list of site codes that can be used in the request.](site_codes.md)
 

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const baseUrl = "http://api.erg.kcl.ac.uk/AirQuality/";
 

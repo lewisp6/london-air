@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var config = require('./config');
+var config = require("./config");
 
 var urlHelper = {};
 

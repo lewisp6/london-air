@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var urlHelper = require('./UrlHelper'),
-    request = require('request'),
-    client = require('./client');
+var urlHelper = require("./UrlHelper"),
+    request = require("request"),
+    client = require("./client");
 
 var pollution = {};
 
@@ -12,10 +12,10 @@ pollution.getHourlyPollutionLevels = function(siteCode, callback) {
 };
 
 pollution.buildUrlPath = function(siteCode) {
-    var url = 'Hourly/MonitoringIndex/GroupName=London/Json';
+    var url = "Hourly/MonitoringIndex/GroupName=London/Json";
 
     if (siteCode) {
-        url = 'Hourly/MonitoringIndex/SiteCode=' + siteCode + '/Json';
+        url = "Hourly/MonitoringIndex/SiteCode=" + siteCode + "/Json";
     }
 
     return url;
