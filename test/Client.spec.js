@@ -15,7 +15,7 @@ var body = {"AirQualityIndexHealthAdvice":{
                 }
                 ]
             }
-            }
+        };
 
 describe("makeRequest", function() {
     var successRequest = nock("http://api.erg.kcl.ac.uk")
