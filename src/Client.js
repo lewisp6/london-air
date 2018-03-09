@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var urlHelper = require('./UrlHelper'),
-    request = require('request');
+var urlHelper = require("./UrlHelper"),
+    request = require("request");
 
 var client = {};
 
