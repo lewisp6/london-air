@@ -1,5 +1,7 @@
 # London-Air
 
+[![Build Status](https://travis-ci.org/lewisp6/london-air.svg?branch=master)](https://travis-ci.org/lewisp6/london-air)
+
 A JS wrapper for the London air quality API provided by http://www.londonair.org.uk/.
 
 The API can be used to get real time pollution information for different London areas.
