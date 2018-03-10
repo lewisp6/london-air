@@ -1,7 +1,7 @@
 "use strict";
 
 var assert = require("chai").assert,
-    client = require("../src/Client"),
+    client = require("../src/client"),
     nock = require("nock");
 
 var body = {"AirQualityIndexHealthAdvice":{
