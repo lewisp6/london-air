@@ -27,9 +27,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "nock": "^9.0.13"
+    "nock": "^9.2.5"
   },
   "dependencies": {
-    "request": "^2.81.0"
+    "request": "^2.85.0"
   }
 }
