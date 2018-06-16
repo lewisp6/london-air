@@ -10,7 +10,7 @@ describe("Health Url Path", function() {
 });
 
 describe("All Health Messages Request", function() {
-    it("should return a response", function() {
+    it("should return a response", function(done) {
         healthMessage.getAllHealthMessages(function(error, result) {
             assert.isNotNull(result);
             done();
