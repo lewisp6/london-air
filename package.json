@@ -1,6 +1,6 @@
 {
   "name": "london-air",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NodeJS wrapper for the London Air Quality API.",
   "main": "index.js",
   "scripts": {
@@ -27,9 +27,9 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
-    "nock": "^9.3.3"
+    "nock": "^10.0.6"
   },
   "dependencies": {
-    "request": "^2.87.0"
+    "request": "^2.88.0"
   }
 }
